@@ -100,10 +100,10 @@ export default function App() {
   ]
 
   const loopSteps = [
-    { id: 'execute', icon: <Play size={32} />, label: i18n.language === 'en' ? 'Execute' : '執行', desc: i18n.language === 'en' ? 'AI runs code' : 'AI 運行代碼', color: 'text-white', bgColor: 'bg-white/5', ringColor: 'ring-white/20' },
-    { id: 'fail', icon: <AlertCircle size={32} />, label: i18n.language === 'en' ? 'Fail' : '失敗', desc: i18n.language === 'en' ? 'Security block' : '觸發安全攔截', color: 'text-red-400', bgColor: 'bg-red-500/10', ringColor: 'ring-red-500/30' },
-    { id: 'feedback', icon: <RefreshCcw size={32} />, label: i18n.language === 'en' ? 'Feedback' : '反饋', desc: i18n.language === 'en' ? 'Semantic info' : '語義化診斷', color: 'text-amber-400', bgColor: 'bg-amber-500/10', ringColor: 'ring-amber-500/30' },
-    { id: 'repair', icon: <CheckCircle2 size={32} />, label: i18n.language === 'en' ? 'Repair' : '修復', desc: i18n.language === 'en' ? 'Self-Correction' : '系統自動修復', color: 'text-primary', bgColor: 'bg-primary/10', ringColor: 'ring-primary/30' },
+    { id: 'execute', icon: <Play size={32} />, label: t('loop.execute'), desc: t('loop.execute_desc'), color: 'text-white', bgColor: 'bg-white/5', ringColor: 'ring-white/20' },
+    { id: 'fail', icon: <AlertCircle size={32} />, label: t('loop.fail'), desc: t('loop.fail_desc'), color: 'text-red-400', bgColor: 'bg-red-500/10', ringColor: 'ring-red-500/30' },
+    { id: 'feedback', icon: <RefreshCcw size={32} />, label: t('loop.feedback'), desc: t('loop.feedback_desc'), color: 'text-amber-400', bgColor: 'bg-amber-500/10', ringColor: 'ring-amber-500/30' },
+    { id: 'repair', icon: <CheckCircle2 size={32} />, label: t('loop.repair'), desc: t('loop.repair_desc'), color: 'text-primary', bgColor: 'bg-primary/10', ringColor: 'ring-primary/30' },
   ]
 
   return (
@@ -384,12 +384,12 @@ export default function App() {
                 <a href="https://github.com/Ming874/mcp-sentinel-box" className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-slate-400 hover:text-primary transition-all border-white/10 shadow-xl"><GithubIcon size={24} /></a>
               </div>
             </div>
-            <div><h4 className="text-white font-black mb-8 text-sm md:text-base uppercase tracking-[0.3em] opacity-40">{t('labels.explore')}</h4><ul className="space-y-4 text-base font-bold">{navLinks.map(link => (<li key={link.href}><a href={link.href} className="text-slate-400 hover:text-primary transition-colors">{link.label}</a></li>))}</ul></div>
-            <div><h4 className="text-white font-black mb-8 text-sm md:text-base uppercase tracking-[0.3em] opacity-40">{t('labels.technical')}</h4><ul className="space-y-4 text-base font-bold"><li><a href="/Report.pdf" className="text-slate-400 hover:text-primary transition-colors">{t('labels.report_pdf')}</a></li><li><a href="https://github.com/Ming874/mcp-sentinel-box/wiki" target="_blank" className="text-slate-400 hover:text-primary transition-colors">{t('labels.wiki')}</a></li></ul></div>
-            <div><h4 className="text-white font-black mb-8 text-sm md:text-base uppercase tracking-[0.3em] opacity-40">{t('labels.reach')}</h4><div className="space-y-6"><div className="flex items-start gap-4"><div className="w-10 h-10 rounded-xl glass flex items-center justify-center text-primary shrink-0 border-primary/20"><Mail size={18} /></div><div><div className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">{t('labels.support')}</div><a href="mailto:contact@mingchen.dev" className="text-lg text-white font-black hover:text-primary transition-colors underline decoration-primary/20">contact@mingchen.dev</a></div></div></div></div>
+            <div><h4 className="text-white font-black mb-8 text-sm md:text-base tracking-widest opacity-40">{t('labels.explore')}</h4><ul className="space-y-4 text-base font-bold">{navLinks.map(link => (<li key={link.href}><a href={link.href} className="text-slate-400 hover:text-primary transition-colors">{link.label}</a></li>))}</ul></div>
+            <div><h4 className="text-white font-black mb-8 text-sm md:text-base tracking-widest opacity-40">{t('labels.technical')}</h4><ul className="space-y-4 text-base font-bold"><li><a href="/Report.pdf" className="text-slate-400 hover:text-primary transition-colors">{t('labels.report_pdf')}</a></li><li><a href="https://github.com/Ming874/mcp-sentinel-box/wiki" target="_blank" className="text-slate-400 hover:text-primary transition-colors">{t('labels.wiki')}</a></li></ul></div>
+            <div><h4 className="text-white font-black mb-8 text-sm md:text-base tracking-widest opacity-40">{t('labels.reach')}</h4><div className="space-y-6"><div className="flex items-start gap-4"><div className="w-10 h-10 rounded-xl glass flex items-center justify-center text-primary shrink-0 border-primary/20"><Mail size={18} /></div><div><div className="text-xs font-black text-slate-500 tracking-widest mb-1">{t('labels.support')}</div><a href="mailto:contact@mingchen.dev" className="text-xl text-white font-black hover:text-primary transition-colors underline decoration-primary/20">contact@mingchen.dev</a></div></div></div></div>
           </div>
           <div className="pt-8 border-t border-white/5 flex justify-center text-center">
-            <div className="text-slate-500 text-xs tracking-widest leading-relaxed max-w-[280px] sm:max-w-none">{t('footer')}</div>
+            <div className="text-slate-500 text-xs tracking-widest leading-relaxed whitespace-pre-line">{t('footer')}</div>
           </div>
         </div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />

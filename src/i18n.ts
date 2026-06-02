@@ -63,7 +63,17 @@ const resources = {
       },
       "report": "Final Report",
       "download_report": "Download Report",
-      "footer": "© 2026 Ming Chen. All Rights Reserved. Professional Sandbox Solutions for the AI\u00a0Era."
+      "loop": {
+        "execute": "Execute",
+        "execute_desc": "AI runs code",
+        "fail": "Fail",
+        "fail_desc": "Security block",
+        "feedback": "Feedback",
+        "feedback_desc": "Semantic info",
+        "repair": "Repair",
+        "repair_desc": "Self-Correction"
+      },
+      "footer": "© 2026 Ming Chen. All Rights Reserved.\nProfessional Sandbox Solutions for the AI Era."
     }
   },
   zh: {
@@ -123,7 +133,17 @@ const resources = {
       },
       "report": "期末報告書",
       "download_report": "下載技術報告",
-      "footer": "© 2026 Ming Chen. All Rights Reserved. Professional Sandbox Solutions for the AI\u00a0Era."
+      "loop": {
+        "execute": "執行",
+        "execute_desc": "AI 運行代碼",
+        "fail": "失敗",
+        "fail_desc": "觸發安全攔截",
+        "feedback": "反饋",
+        "feedback_desc": "語義化診斷",
+        "repair": "修復",
+        "repair_desc": "系統自動修復"
+      },
+      "footer": "© 2026 Ming Chen. All Rights Reserved.\nProfessional Sandbox Solutions for the AI Era."
     }
   }
 };

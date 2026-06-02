@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sentinel-box.mingchen.dev/sitemap.xml
+Sitemap: https://sentinelbox.mingchen.dev/sitemap.xml
