@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #10b981; /* Emerald-500 */
+  --color-primary-dark: #059669;
+  --color-primary-light: #34d399;
+  
+  --color-secondary: #0ea5e9; /* Sky-500 */
+  --color-secondary-dark: #0284c7;
+  --color-secondary-light: #38bdf8;
+  
+  --color-accent: #f59e0b;
+  
+  --color-dark-bg: #0a0a0b;
+  --color-dark-surface: #161618;
+  --color-dark-border: #27272a;
+  
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+}
+
+:root {
+  font-family: "Inter", "SF Pro Display", "PingFang TC", "Heiti TC", "Microsoft JhengHei", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #fafafa;
+  background-color: #0a0a0b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Disable text selection for app-like feel */
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-dark-bg text-slate-100 overflow-x-hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-white;
+    font-family: "Inter", "SF Pro Display", "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+  }
+}
+
+/* Enhanced blur and glass for better visibility */
+.glass {
+  @apply bg-dark-surface/60 backdrop-blur-3xl border border-white/10;
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  @apply shadow-[0_0_15px_rgba(16,185,129,0.2)] border-primary/40;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-border rounded-full hover:bg-slate-700 transition-colors;
+}
+
+/* Loop Animation Styles */
+.loop-item {
+  @apply relative overflow-hidden transition-all duration-500;
+}
+
+.loop-active {
+  @apply ring-2 ring-primary/50 bg-primary/10 border-primary/40 shadow-[0_0_30px_rgba(16,185,129,0.2)];
+}
