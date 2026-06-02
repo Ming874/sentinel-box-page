@@ -268,7 +268,7 @@ export default function App() {
               </motion.div>
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="relative hidden lg:block">
                 <div className="absolute -inset-2 bg-primary/20 rounded-3xl blur-[100px] opacity-20" />
-                <div className="relative glass p-2 rounded-3xl border-white/10 shadow-3xl overflow-hidden"><img src="/image.png" alt="Dashboard" className="rounded-2xl shadow-2xl w-full" /></div>
+                <div className="relative glass p-2 rounded-3xl border-white/10 shadow-3xl overflow-hidden"><img src="/image.png" alt="SentinelBox Dashboard showing real-time security monitoring and AI agent execution logs" className="rounded-2xl shadow-2xl w-full" /></div>
                 <motion.div animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute -top-4 -right-4 glass px-6 py-5 rounded-2xl border-primary/30 shadow-2xl">
                   <div className="flex items-center gap-4"><Activity size={20} className="text-primary" /><div><div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">{t('labels.protection')}</div><div className="text-sm font-black text-white uppercase italic">{t('labels.sentinel')}</div></div></div>
                 </motion.div>
